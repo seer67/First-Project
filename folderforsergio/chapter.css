@@ -502,61 +502,59 @@ h4{
     align-items: center;
 }
 
-.box-item {
-    flex: 0 0 auto;               
-    width: 90%;              /* ikut lebar layar, tapi ada jarak */
-    max-width: 1000px;       /* maksimal biar nggak terlalu lebar di layar besar */
-    height: auto;            /* otomatis tinggi menyesuaikan isi */
-    background-color: rgb(49, 47, 47);
-    border-radius: 10px;
-    margin: 40px 0 40px 40px;      /* auto = center */
-    padding: 15px;           /* beri jarak isi dari pinggir box */
-    box-shadow: black 0px 0px 5px;
-    display: flex;           /* supaya buku diatur dengan fleksibel */
-    gap: 15px;
-    color: white; 
-                  /* jarak antar isi */
-}
 
-.buku img {
-    width: 100%;             /* penuh dalam wadah */
-    max-width: 130px;        /* tidak lebih besar dari 130px */
-    height: auto;            /* tinggi otomatis */
-    object-fit: cover;       /* biar rapi */
-    border-radius: 10px;
-}
+.box-item{
+position: absolute;
+width: 1177.4px;
+height: 234px;
+left: 44.74px;
+top: 1286px;
+
+background: #CBCBCB;
 
 
+/* Rectangle 72 */
+
+position: absolute;
+width: 367.58px;
+height: 190px;
+left: 67.72px;
+top: 1308px;
+
+background: #FFFFFF;
+
+
+/* Lorem ipsum */
+
+position: absolute;
+width: 207px;
+height: 40px;
+left: 468px;
+top: 1308px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 39px;
+
+color: #000000;
 
 
 
-.judul {
-    display: flex;
-    flex-direction: column;   /* susun vertikal: judul di atas, teks di bawah */
-    align-items: flex-start;  /* teks rata kiri */
-  
-    
-}
+/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore */
 
-.judul p {
-    font-size: 14px;
-    margin-top: 6px;          /* jarak atas biar tidak nempel judul */
-    line-height: 1.5;
-    
-}
+position: absolute;
+width: 754px;
+height: 155px;
+left: 468px;
+top: 1420px;
 
-.judul h6 {
-    margin: 0;                /* hilangkan jarak default */
-    font-size: 12px;
-    display: flex;
-    justify-content: space-between;
-}
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
 
-.garis{
-    border: none;
-    height: 3px;              /* Tebal garis, misal 4px */
-    background-color: #000000;
-    display: block;
-    margin: 16px auto;
-    border-radius: 2px;       /* Opsional: biar ujungnya agak bulat */
+color: #000000;
 }
