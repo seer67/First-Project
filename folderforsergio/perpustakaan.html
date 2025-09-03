@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tampilan Buku</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="perpus.js" defer></script>
+    
+</head>
+<body>
+
+<button id="theme-switch">
+                <svg class="moon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" ><path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Z"/></svg>
+                <svg class="sun" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" ><path d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Z"/></svg>
+        </button>
+
+
+
+
+<!-- Navbar -->
+<div class="navbar">
+
+<div class="menu-icon" id="menuIcon" onclick="Menu()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+    <div class="logo">
+        <img src="WhatsApp_Image_2025-08-14_at_14.42.09_5b921d60-removebg-preview.png" alt="Logo">
+    </div>
+    <div class="search-bar">
+        <input type="text" placeholder="Search">
+    </div >
+ <a href="auth.html" class="login-btn">Login</a>
+</div>
+<div id="dropdown-menu" class="dropdown-menu">
+  <a href="#">
+  <img src="chimney-home-icon-transparent-1.png" alt="Home" class="icon-home">
+  <span>Home</span>
+</a>
+     <a href="#">Riwayat</a>
+</div>
+<div class="main-content">
+<div class="detail-container">
+  <div class="detail-cover">
+    <img src="OIP (8).jpeg" alt="Solo Leveling">
+  </div>
+  <div class="detail-info">
+    <div class="detail-title">Solo Leveling</div>
+   
+    <div class="detail-desc">
+      Solo Leveling adalah manga di mana MC-nya adalah hunter terlemah yang menjadi sangat kuat seiring waktu. Cerita penuh aksi, dunia dungeon, dan pertumbuhan karakter yang epik.
+    </div>
+     <div class="detail-meta">
+      <span>Genre: Action</span>
+      <span>Fantasy</span>
+      <span>Adventure</span>
+      <span>Total Chapter: 200</span>
+    </div>
+<div class="detail-status ongoing">Ongoing</div>
+    <!-- Jika sudah tamat, ganti jadi: <div class="detail-status" style="background:#b00020;">Completed</div> -->
+  </div>
+</div>
+</div> 
+
+<div class="main-content">
+    <!-- Semua section dan isi buku di sini -->
+    <div class="section">
+    <h3>Riwayat</h3>
+    <div class="book-grid" id="riwayat">
+        <div class="book-item">
+            <a href="sololev1.html">
+                <img src="OIP (8).jpeg" alt="Solo Leveling">
+            </a>
+            <div class="overlay">
+                <p class="tengah">Solo Leveling adalah manga dimana MC-nya ialah hunter terlemah yang menjadi kuat seiring waktu</p>
+            </div>
+        </div>
+        <!-- Book-item kosong -->
+        <div class="book-item"></div>
+        <div class="book-item"></div>
+        <div class="book-item"></div>
+        <div class="book-item"></div>
+        <div class="book-item"></div>
+        <div class="book-item"></div>
+        <div class="book-item"></div>
+        <div class="book-item"></div>
+        <div class="book-item"></div>
+        <div class="book-item"></div>
+        <div class="book-item"></div>
+        <div class="book-item"></div>
+    </div>
+    <div class="dots" id="riwayat-dots">
+        <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+    </div>
+
+
+
+
+<!-- Buku Mata Pelajaran -->
+<div class="section">
+    <h3>Buku Mata Pelajaran</h3>
+    <div class="book-grid" id="pelajaran">
+        <div class="book-item"></div><div class="book-item"></div><div class="book-item"></div>
+        <div class="book-item"></div><div class="book-item"></div><div class="book-item"></div>
+        <div class="book-item"></div><div class="book-item"></div><div class="book-item"></div>
+        <div class="book-item"></div><div class="book-item"></div><div class="book-item"></div>
+    </div>
+    <div class="dots" id="pelajaran-dots">
+        <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+    </div>
+</div>
+
+<!-- Novel -->
+<div class="section">
+    <h3>Novel</h3>
+    <div class="book-grid" id="novel">
+        <div class="book-item"></div><div class="book-item"></div><div class="book-item"></div>
+        <div class="book-item"></div><div class="book-item"></div><div class="book-item"></div>
+        <div class="book-item"></div><div class="book-item"></div><div class="book-item"></div>
+        <div class="book-item"></div><div class="book-item"></div><div class="book-item"></div>
+    </div>
+    <div class="dots" id="novel-dots">
+        <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+    </div>
+</div>
+
+<!-- Comic -->
+<div class="section">
+    <h3>Comic</h3>
+    <div class="book-grid" id="comic">
+        <div class="book-item"></div><div class="book-item"></div><div class="book-item"></div>
+        <div class="book-item"></div><div class="book-item"></div><div class="book-item"></div>
+        <div class="book-item"></div><div class="book-item"></div><div class="book-item"></div>
+        <div class="book-item"></div><div class="book-item"></div><div class="book-item"></div>
+    </div>
+    <div class="dots" id="comic-dots">
+        <span class="dot active"></span><span class="dot"></span><span class="dot"></span>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,309 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e0e0e0;
+}
+
+/* HEADER */
+.top-bar {
+    display: flex;
+    align-items: center;
+    background-color: #b3d9f5;
+    padding: 8px 16px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    background: none;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.explore {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.flag {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.flag img {
+    width: 20px;
+    height: 14px;
+    margin-right: 5px;
+}
+
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    height: 68px;
+    background: #b3d9f5;
+    padding: 0 16px;
+    gap: 16px;
+    box-sizing: border-box;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+    margin-left: 0;
+}
+
+.logo img {
+    max-height: 80px;   /* SAMA dengan style.css di perpustakaan.html */
+    width: 70px;
+    display: block;
+}
+
+.topbar-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    width: 50%;
+    height: 20px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.login-btn {
+    margin-left: 10px;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fdfbfb;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* NAV BAR */
+.nav-bar {
+    display: flex;
+    
+    background-color: #9ed0f0;
+    padding: 10px;
+    gap: 20px;
+    height: 100px;
+   
+
+    
+    
+}
+
+
+
+/* CONTENT */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+.box {
+    width: 300px;
+    height: 150px;
+    background-color: white;
+    
+}
+/* ...existing code... */
+.nav-bar button {
+    background-color: white;
+    border: none;
+    padding: 6px 16px;   /* Ukuran kecil khusus navbar */
+    font-size: 14px;     /* Ukuran font kecil khusus navbar */
+    cursor: pointer;
+}
+
+/* ...existing code... */
+
+
+
+.button{
+    background-color: #feffff;
+    border: none;
+    padding: 6px 16px;   /* Ukuran kecil khusus navbar */
+    font-size: 14px;     /* Ukuran font kecil khusus navbar */
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+    width: 375px;         /* Lebar tombol horizontal */
+    height: 20px;         /* Tinggi tombol */
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 30px; /* Jarak antar tombol */
+    text-decoration: none;
+    color: inherit;
+   
+}
+
+.button{
+    text-decoration: none;
+    color: inherit; /* Agar warna teks tidak berubah seperti link */
+    font-weight: bold;
+}
+
+.tombol {
+    display: flex;
+    flex-direction: row;    /* Susun secara horizontal */
+    justify-content: center;/* Tengah secara horizontal */
+    gap: 10px;              /* Jarak antar tombol */
+    margin-bottom: 10px;
+    margin-top: 60px;
+}
+
+.menu-icon span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #444;
+    border-radius: 2px;
+    transition: width 0.5s, height 0.5s, margin 0.5s;
+    margin: 0;
+}
+
+.menu-icon.active {
+    flex-direction: row;
+}
+
+.menu-icon.active span {
+    width: 4px;
+    height: 100%;
+    margin: 0 2px;
+}
+.dropdown-menu {
+    display: block; /* Ubah dari none ke block, kontrol dengan opacity & transform */
+    position: absolute;
+    top: 67px;
+    left: 3px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    min-width: 135px;
+    z-index: 100;
+    flex-direction: column;
+    min-height: 250px;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: opacity 0.3s, transform 0.3s;
+    pointer-events: none; /* Supaya tidak bisa diklik saat tertutup */
+}
+
+.dropdown-menu.show {
+    opacity: 1;
+    transform: scaleX(1);
+    pointer-events: auto;
+}
+/* ...existing code... */
+.dropdown-menu a {
+    padding: 10px 16px;
+    color: #333;
+    text-decoration: none;
+    display: flex;
+    align-items: center;         /* Sudah benar untuk vertikal tengah */
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.dropdown-menu .icon-home {
+    width: 22px;                /* Sedikit lebih besar agar sejajar */
+    height: 22px;
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -5px;
+}
+
+.dropdown-menu a span {
+    display: flex;
+    align-items: center;
+    height: 22px; /* Samakan dengan tinggi ikon */
+    margin-left: 2px;
+}
+
+.dropdown-menu a:hover {
+    background: #f0f0f0;
+}
+    
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    margin-right: 12px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s;
+    z-index: 110;
+}
+ .menu-icon {
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    user-select: none;
+    transition: flex-direction 0.3s;
+    z-index: 110;
+ }
+.menu-icon span {
+    display: block;
+    width: 100%;       /* Garis horizontal penuh */
+    height: 4px;       /* Tipis, jadi horizontal */
+    background: #444;
+    border-radius: 2px;
+    transition: 0.3s;
+    margin: 0;
+}
+
+.menu-icon.active {
+    flex-direction: row; /* Saat aktif, span berjajar vertikal */
+    transition: flex-direction 0.3s;
+}
+.menu-icon.active span {
+    width: 4px;    /* Jadi garis tegak */
+    height: 100%;  /* Sepanjang icon */
+    margin: 0 2px;
+    transform: none !important; /* Hapus transform silang jika ada */
+    opacity: 1 !important;      /* Pastikan semua garis tampil */
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 110;
+}
