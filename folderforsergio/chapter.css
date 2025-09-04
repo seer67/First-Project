@@ -503,58 +503,61 @@ h4{
 }
 
 
-.box-item{
-position: absolute;
-width: 1177.4px;
-height: 234px;
-left: 44.74px;
-top: 1286px;
+.box-item {
+    flex: 0 0 auto;               
+    width: 90%;              /* ikut lebar layar, tapi ada jarak */
+    max-width: 900px;       /* maksimal biar nggak terlalu lebar di layar besar */
+    height: 150px;            /* otomatis tinggi menyesuaikan isi */
+    background-color: rgb(49, 47, 47);
+   margin-left:  15px;       /* auto = center */
+    padding: 15px;           /* beri jarak isi dari pinggir box */
+    box-shadow: black 0px 0px 5px;
+    display: flex;           /* supaya buku diatur dengan fleksibel */
+    gap: 0px;
+    color: white;               /* jarak antar isi */
+}
 
-background: #CBCBCB;
-
+.buku img {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;    /* Gambar akan crop agar pas di kotak */
+    border-radius: 10px;
+    display: block;
+    max-width: unset; 
+}
 
 /* Rectangle 72 */
 
-position: absolute;
-width: 367.58px;
-height: 190px;
-left: 67.72px;
-top: 1308px;
-
-background: #FFFFFF;
-
-
-/* Lorem ipsum */
-
-position: absolute;
-width: 207px;
-height: 40px;
-left: 468px;
-top: 1308px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 32px;
-line-height: 39px;
-
-color: #000000;
+.buku{
+    width: 600px;             /* penuh dalam wadah */
+    max-width: 400px;        /* tidak lebih besar dari 130px */
+             /* tinggi otomatis */
+    object-fit: cover;       /* biar rapi */
+    border-radius: 10px;
+}
 
 
 
-/* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore */
 
-position: absolute;
-width: 754px;
-height: 155px;
-left: 468px;
-top: 1420px;
 
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-line-height: 29px;
+.judul {
+    display: flex;
+    flex-direction: column;   /* susun vertikal: judul di atas, teks di bawah */
+    align-items: flex-start;  /* teks rata kiri */
+  
+    
+}
 
-color: #000000;
+.judul p {
+    font-size: 14px;
+    margin-top: 6px;          /* jarak atas biar tidak nempel judul */
+    line-height: 1.5;
+    
+}
+
+.judul h6 {
+    margin: 0;                /* hilangkan jarak default */
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
 }

@@ -1,3 +1,199 @@
+.populer-single-slider-container {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+}
+
+.populer-single-slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+}
+
+.populer-single-slider .detail-container {
+   max-width: 5000px;
+  flex: 0 0 100%;
+  box-sizing: border-box;
+  padding: 32px;
+}
+
+.populer-horizontal-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+.populer-horizontal-slider {
+  display: flex;
+  gap: 32px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 16px 0;
+  width: 100%;
+}
+.populer-horizontal-slider::-webkit-scrollbar {
+  display: none;
+}
+.populer-horizontal-container .scroll-left,
+.populer-horizontal-container .scroll-right {
+  position: relative;
+  z-index: 2;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  margin: 0 8px;
+}
+.populer-horizontal-container .scroll-left:hover,
+.populer-horizontal-container .scroll-right:hover {
+  opacity: 1;
+}
+.populer-detail-slider-container {
+  max-width: 700px;
+  min-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+}
+.populer-detail-slider {
+  min-width: 100%;
+  display: flex;
+  transition: transform 0.7s cubic-bezier(.4,1.3,.6,1);
+  will-change: transform;
+}
+.populer-card-slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: center;
+}
+.populer-card-slider {
+  display: flex;
+  transition: transform 0.7s cubic-bezier(.4,1.3,.6,1);
+  will-change: transform;
+}
+.populer-card {
+  display: flex;
+  background: #222;
+  color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  overflow: hidden;
+  min-width: 480px;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 24px;
+  align-items: stretch;
+}
+.populer-card-cover {
+  flex: 0 0 180px;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.populer-card-cover img {
+  width: 180px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.populer-card-info {
+  flex: 1;
+  padding: 24px 20px 24px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.populer-card-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.populer-card-genre {
+  font-size: 1rem;
+  color: #ffd700;
+  margin-bottom: 12px;
+}
+.populer-card-desc {
+  font-size: 1rem;
+  color: #eee;
+}
+.populer-slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 24px;
+}
+.populer-slider {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.7s cubic-bezier(.4,1.3,.6,1);
+  will-change: transform;
+}
+.genre-dropdown-container {
+  position: relative;
+  display: inline-block;
+  margin-left: 24px;
+}
+.genre-dropdown-btn {
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.genre-dropdown-btn:hover {
+  background: #444;
+}
+.genre-dropdown-list {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 110%;
+  background: #fff;
+  min-width: 160px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  border-radius: 6px;
+  z-index: 100;
+  padding: 6px 0;
+}
+.genre-dropdown-list.show {
+  display: block;
+}
+.genre-option {
+  padding: 10px 18px;
+  cursor: pointer;
+  color: #222;
+  font-size: 15px;
+  transition: background 0.2s;
+}
+.genre-option:hover {
+  background: #f0f0f0;
+}
+
 body {
             font-family: Arial, sans-serif;
             background-color: #f5f5f5;
@@ -204,18 +400,28 @@ body {
             margin-bottom: 10px;
         }
         .book-grid {
-    display: flex;               /* Susun item horizontal */
-    flex-wrap: nowrap;           /* Supaya tidak turun ke bawah */
-    gap: 20px;                    /* Jarak antar item */
-    overflow-x: auto;             /* Aktifkan scroll horizontal */
-    padding-bottom: 10px;         /* Biar ada ruang di bawah */
-    scrollbar-width: none;        /* Scrollbar tipis di Firefox */
+  display: flex;               /* Susun item horizontal */
+  flex-wrap: nowrap;           /* Supaya tidak turun ke bawah */
+  gap: 20px;                    /* Jarak antar item */
+  overflow-x: auto;             /* Aktifkan scroll horizontal */
+  padding-bottom: 10px;         /* Biar ada ruang di bawah */
+  scrollbar-width: none;        /* Sembunyikan scrollbar di Firefox */
+  /* Sembunyikan scrollbar di Chrome, Safari, Edge */
+  -ms-overflow-style: none; /* IE dan Edge lama */
+  white-space: nowrap;          /* Pastikan item tetap satu baris */
+  -webkit-overflow-scrolling: touch; /* Smooth scroll di mobile & PC */
+  overscroll-behavior-x: contain; /* Cegah scroll parent ikut */
 }
+.book-grid::-webkit-scrollbar {
+  display: none;
+}
+
 
 
 
 .book-item {
     flex: 0 0 auto;
+    min-width: 130px;
     width: 130px;
     height: 200px;
     background-color: #d9d9d9;
@@ -224,16 +430,15 @@ body {
     cursor: pointer;
     display: flex;
     text-align: center;
-
-    /* tambahkan untuk animasi fade-in */
-        opacity: 0;
-    transform: translateX(50px); /* geser dikit ke kanan */
-    transition: all 0.6s ease
-    }
+    /* Tambahkan ini untuk animasi */
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
 
 .book-item.show {
     opacity: 1;
-  transform: translateX(0);
+    transform: translateX(0);
 }
 
 
@@ -260,8 +465,9 @@ body {
 }
 
 .book-grid::-webkit-scrollbar {
-    display: none;
+  height: 8px; /* Scrollbar horizontal selalu muncul di Chrome/Safari/Edge */
 }
+
 
 
 
@@ -281,7 +487,7 @@ body {
 
 /* Overlay yang muncul saat hover */
 .overlay {
-    position: absolute;
+  position: absolute;
     right: 0;
     top: 0;
     width: 100%;
@@ -295,7 +501,6 @@ body {
     text-align: center;
     opacity: 0; /* awalnya hilang */
     transition: opacity 0.3s ease; /* efek transisi */
-   
 }
 
 .book-item img {
@@ -313,15 +518,18 @@ body {
 }
 
 .tengah{
+ 
     text-align: center;
-    display: flex;
-    justify-content: center;
+    white-space: normal;
+    
 }
 
 /* ...existing code... */
 .overlay {
     pointer-events: none;
 }
+/* ...existing code... */
+
 /* ...existing code... */
 
 .menu-icon {
@@ -548,7 +756,8 @@ body.darkmode .detail-meta span {
 /* slide populer */
 
 
-/* ...existing code... */
+
+
 .detail-container {
   max-width: 5000px;
   margin: 0px auto;
@@ -556,7 +765,7 @@ body.darkmode .detail-meta span {
   box-shadow: 0 4px 24px rgba(0,0,0,0.08);
   display: flex;
   gap: 32px;
-  padding: 32px;
+
   align-items: flex-start;
   height: 100%;
   /* opacity: 0.2;  <-- HAPUS baris ini */
@@ -650,13 +859,16 @@ font-weight: bold;
     flex-direction: column;
     padding: 18px;
     gap: 18px;
+    max-width: 100vw;
+    min-width: 0;
   }
   .detail-cover {
     width: 100%;
     min-width: 0;
+    max-width: 100%;
   }
   .detail-cover img {
-    height: 220px;
+    height: 200px;
   }
 }
 
@@ -705,7 +917,7 @@ circle-right {
  
   color: black;/* warna ongoing */
   background-color: white;
-  max-width: 9%;
+  width: 8%;
   border-radius: 6px;
   padding: 4px 14px;
   display: inline-flex;   /* biar bisa align dengan dot */
@@ -733,4 +945,57 @@ circle-right {
 }
 
 /* box item */
+
+
+.scroll-right {
+  position: absolute;
+  right: 0;
+  top: 97%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.scroll-right:hover {
+  opacity: 1;
+}
+
+.scroll-left {
+  position: absolute;
+  left: 0;
+  top: 97%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.scroll-left:hover {
+  opacity: 1;
+}
+
+/* Tambahkan/update CSS untuk tombol scroll */
+.pop h3{
+  margin-bottom: 20px;
+  left: auto;
+}
+
+.pop{
+padding: 0 20px;
+}
 
