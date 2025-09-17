@@ -1,0 +1,193 @@
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #23272a 0%, #2c2f33 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url(anime-style-clouds.jpg);
+            background-size: cover;
+            background-position: center;
+            
+        }
+        .container {
+            background: #ffffffb0;
+            padding: 2.5rem 2.5rem 2rem 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.45);
+            width: 350px;
+            max-width: 95vw;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #000000;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        .form-group {
+            margin-bottom: 1.2rem;
+            margin-right: 26px;
+            position: relative;
+            
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #000000;
+            font-size: 1rem;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #94c7eedb;
+            border-radius: 8px;
+            background: #94c7eedb;
+            color: #000000;
+            font-size: 1rem;
+            margin-bottom: 0.2rem;
+            transition: border 0.2s;
+    
+        }
+        input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+            border-color: #00aeff;
+            outline: none;
+        }
+        .btn {
+            width: 100%;
+            padding: 0.9rem;
+            background: linear-gradient(90deg, #00aeff 0%, #0074e0 100%);
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-bottom: 1.2rem;
+            box-shadow: 0 2px 8px rgba(0,174,255,0.08);
+            transition: all 0.2s;
+
+        }
+        .btn:hover {
+            padding: 12px;
+            transform: translateY(-2px);
+            background: #fff;
+            color: #71a7e1;
+        }
+        .social-row {
+            display: flex;
+            gap: 0.7rem;
+            margin-bottom: 1.2rem;
+        }
+        .social-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.7rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+            transition: background 0.2s;
+        }
+        .google {
+            background: #fff;
+            color: #23272a;
+            border: 1px solid #b9bbbe;
+        }
+        .google:hover {
+            background: #e6e6e6;
+        }
+        .facebook {
+            background: #1877f3;
+            color: #fff;
+            border: none;
+        }
+        .facebook:hover {
+            background: #145db2;
+        }
+        .toggle-link {
+            text-align: center;
+            color: #00aeff;
+            cursor: pointer;
+            text-decoration: underline;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+        .forgot-link {
+            text-align: right;
+            margin-top: 0.5rem;
+        }
+        .forgot-link a {
+            color: #00aeff;
+            text-decoration: underline;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-right: 32%;
+           
+        }
+        .icon {
+            width: 22px;
+            height: 22px;
+            vertical-align: middle;
+        }
+        
+        #bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* biar pas nutup layar */
+  z-index: -1; /* di belakang konten */
+}
+
+/* Konten di atas video */
+.content {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  top: 40%;
+  text-shadow: 2px 2px 5px black;
+}
+
+/* Tombol login */
+
+
+.eye-icon {
+  position: absolute;
+  top: 70%;
+  right: -10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  user-select: none;       /* biar ga bisa ke-select */
+  -webkit-user-select: none;
+  -ms-user-select: none;          /* sedikit transparan */
+}
+
+.gambar{
+    position: absolute;
+    top: 0px;
+    width: 100px; /* atur ukuran sesuai kebutuhan */
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    margin-bottom: 40px;    
+    }
+
+
+    @keyframes keluar {
+      0% {
+        transform: translateY(-120vw); /* posisi awal */
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0); /* geser keluar kanan */
+        opacity: 1;
+      }
+    }
